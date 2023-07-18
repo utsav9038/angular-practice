@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'practice2';
   
-getcall(item:string){
-  console.log(item)
-}
+  submitform(item:any){
+    console.log(item)
+
+  }
 }

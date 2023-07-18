@@ -1,5 +1,11 @@
 <h1>welecome to app</h1>
 
-<input type="text" placeholder="enter your name" #box>
-<button (click)="getcall(box.placeholder)">click for template</button>
-<p>value is : {{ box.value | usdtoinr :80}}</p>
+<form #login="ngForm" (ngSubmit)=submitform(login.value)>
+<input type="text" placeholder="enter name" ngModel name="username">
+<br>
+<br>
+<input type="text" placeholder="enter password" ngModel name="password">
+<br>
+<br>
+<button >click to submit</button>
+</form>
