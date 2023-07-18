@@ -1,11 +1,13 @@
 <h1>welecome to app</h1>
 
-<form #login="ngForm" (ngSubmit)=submitform(login.value)>
-<input type="text" placeholder="enter name" ngModel name="username">
+<form [formGroup]="loginform" (ngSubmit)=submitform(loginform.value) >
+<input type="text" placeholder="enter name"  name="username" formControlName="username">
+<p *ngIf="username && username.invalid && username.touched ">its required</p>
 <br>
 <br>
-<input type="text" placeholder="enter password" ngModel name="password">
+<input type="text" placeholder="enter password" name="password" formControlName="password">
+<p *ngIf="password && password.invalid && password.touched ">its required password</p>
 <br>
 <br>
-<button >click to submit</button>
+<button [disabled]="loginform.invalid">click to submit</button>
 </form>
