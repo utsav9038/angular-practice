@@ -1,4 +1,4 @@
 <h1>welecome to app</h1>
 
-<input type="text" [(ngModel)]="name">
-<p>{{name}}</p>
+<input type="text" placeholder="enter your name" #box>
+<button (click)="getcall(box.placeholder)">click for template</button>
