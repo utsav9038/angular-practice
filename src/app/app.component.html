@@ -2,7 +2,4 @@
 
 <input type="text" placeholder="enter your name" #box>
 <button (click)="getcall(box.placeholder)">click for template</button>
-<p>{{box.placeholder | uppercase}}</p>
-<p>{{box.placeholder | slice : 1 : 5 |uppercase}}</p>
-<p>{{2000 |currency:"USD"}}</p>
-<p>{{2.3 |number : '4.3-5'}}</p>
+<p>value is : {{ box.value | usdtoinr :80}}</p>
